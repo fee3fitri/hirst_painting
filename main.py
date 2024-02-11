@@ -12,15 +12,27 @@ def random_color():
 
 t = Turtle()
 s = Screen()
+
+dot_size = 30
+gap = dot_size * 2
+dot_num = 15
+screen_size = dot_size * 2 * dot_num
+width = 400
+height = 400
+starting_x = -width
+starting_y = -height
+
+t.speed(0)
 s.colormode(255)
+s.screensize(screen_size, screen_size)
 
-print(random_color())
-
-t.pencolor(random_color())
-t.dot(20)
-t.penup()
-t.forward(50)
-
-
+for i in range(dot_num):
+    t.penup()
+    t.goto(starting_x, starting_y + gap * i)
+    for j in range(dot_num):
+        t.pencolor(random_color())
+        t.dot(dot_size)
+        t.penup()
+        t.forward(gap)
 
 s.exitonclick()
