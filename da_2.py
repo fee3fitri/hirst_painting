@@ -28,7 +28,7 @@ for i in range(1000):
     x = random.randint(-300, 300)
     y = random.randint(-300, 300)
     color = random.choice(colors)
-    size = random.randint(1, 5)
+    size = random.randint(5, 20)
     create_spot(x, y, color, size)
 
 # Keep the window open
