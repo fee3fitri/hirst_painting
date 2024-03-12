@@ -1,38 +1,26 @@
-import colorgram
-from turtle import Turtle, Screen
-import random
+# Prompt the user for input by completing the code
+num1 = input(float())
+num2 = input(float())
 
+# Perform calculations
+# Input the code needed to create the calculations
+# There should be three code lines to resolve this
+addition_result = num1 + num2
+subtraction_result = num1 - num2
+multiplication_result = num1 * num2
 
-def random_color():
-    num_color = 100
-    colors = colorgram.extract('spot_painting.jpg', num_color)
-    rgb_float = random.choice(colors).rgb
-    return rgb_float
+# Handle division by zero
+if num2 != 0:
+    # Input the code to resolve this
+    division_result = "Error! You've entered 0 as a divisor"
+else:
+    # Input the code to resolve this
+    division_result = num1 / num2
 
-
-t = Turtle()
-s = Screen()
-
-dot_size = 30
-gap = dot_size * 2
-dot_num = 15
-screen_size = dot_size * 2 * dot_num
-width = 400
-height = 400
-starting_x = -width
-starting_y = -height
-
-t.speed(0)
-s.colormode(255)
-t.penup()
-t.hideturtle()
-s.screensize(screen_size, screen_size)
-
-for i in range(dot_num):
-    t.goto(starting_x, starting_y + gap * i)
-    for j in range(dot_num):
-        t.pencolor(random_color())
-        t.dot(dot_size)
-        t.forward(gap)
-
-s.exitonclick()
+# Display the results
+# Complete the code to display the calculations
+# there should be four print statements
+print(f"{num1} + {num2} = {addition_result}")
+print(f"{num1} - {num2} = {subtraction_result}")
+print(f"{num1} * {num2} = {multiplication_result}")
+print(f"{num1} / {num2} = {division_result}")
